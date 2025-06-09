@@ -1,5 +1,7 @@
-body { font-family: Arial, sans-serif; background: #f4f4f4; }
-header { text-align: center; }
-.container-fluid { padding: 20px; }
-.table { background: white; border-radius: 5px; }
-canvas { max-width: 100%; }
+body { font-family: 'Arial', sans-serif; transition: background 0.3s; }
+header { box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+section { transition: background 0.3s; }
+#3dViewer { border: 1px solid #ddd; }
+#voiceCommand { box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+.dark .table { background: #1f2937; color: white; }
+.kanban-card { cursor: move; padding: 10px; background: #f3f4f6; border-radius: 5px; }
