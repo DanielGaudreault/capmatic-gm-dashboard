@@ -21,15 +21,19 @@ $(document).ready(function() {
     const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('3dViewer') });
     renderer.setSize(300, 300);
     const geometry = new THREE.BoxGeometry(); // Placeholder for machine model
-    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-    const cube = new THREE.Mesh(geometry, material);
-    scene.add(cube);
+    const material = new THREE.MeshBasicMaterial({ color: 0x3b82f6 });
+    const machine = new THREE.Mesh(geometry, material);
+    scene.add(machine);
     camera.position.z = 5;
     function animate() {
         requestAnimationFrame(animate);
-        cube.rotation.x += 0.01;
-        cube.rotation.y += 0.01;
+        machine.rotation.x += 0.01;
+        machine.rotation.y += 0.01;
         renderer.render(scene, camera);
     }
     animate();
+
+    // GM's Focus
+    const focusMessages = ['Keep the fillers at peak performance!', 'Let’s optimize the labelers today!'];
+    $('#gmFocus').text(focusMessages[Math.floor(Math.random() * focusMessages.length)]);
 });
