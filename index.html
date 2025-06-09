@@ -5,38 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capmatic GM Command Center</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/tailwind.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <header class="bg-dark text-white p-3">
-        <h1>Capmatic GM Dashboard</h1>
+<body class="bg-gray-100 dark:bg-gray-900">
+    <header class="bg-blue-800 text-white p-4 flex justify-between">
+        <h1 class="text-2xl font-bold">Capmatic GM Command Center</h1>
+        <button id="darkModeToggle" class="p-2 rounded">🌙</button>
     </header>
-    <main class="container-fluid">
-        <div class="row">
-            <div class="col-md-3">
-                <h2>Production</h2>
-                <canvas id="productionChart"></canvas>
-            </div>
-            <div class="col-md-3">
-                <h2>Employees</h2>
-                <table class="table" id="employeeTable"></table>
-            </div>
-            <div class="col-md-3">
-                <h2>Customers</h2>
-                <div id="salesPipeline"></div>
-            </div>
-            <div class="col-md-3">
-                <h2>Tasks</h2>
-                <div id="kanbanBoard"></div>
-            </div>
-        </div>
+    <main class="container-fluid p-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <section class="bg-white dark:bg-gray-800 p-4 rounded shadow">
+            <h2 class="text-xl">Production</h2>
+            <canvas id="productionChart"></canvas>
+            <div id="3dViewer" class="h-64"></div>
+        </section>
+        <section class="bg-white dark:bg-gray-800 p-4 rounded shadow">
+            <h2 class="text-xl">Employees</h2>
+            <table class="table" id="employeeTable"></table>
+        </section>
+        <section class="bg-white dark:bg-gray-800 p-4 rounded shadow">
+            <h2 class="text-xl">Customers</h2>
+            <div id="salesPipeline"></div>
+        </section>
+        <section class="bg-white dark:bg-gray-800 p-4 rounded shadow">
+            <h2 class="text-xl">Tasks</h2>
+            <div id="kanbanBoard" class="grid grid-cols-3 gap-2"></div>
+        </section>
+        <section class="bg-white dark:bg-gray-800 p-4 rounded shadow">
+            <h2 class="text-xl">Financials</h2>
+            <canvas id="budgetChart"></canvas>
+        </section>
+        <section class="bg-white dark:bg-gray-800 p-4 rounded shadow">
+            <h2 class="text-xl">Innovation</h2>
+            <div id="ideaVault"></div>
+        </section>
     </main>
+    <button id="voiceCommand" class="fixed bottom-4 right-4 p-4 bg-blue-600 text-white rounded-full">🎙️</button>
     <script src="js/jquery.min.js"></script>
+    <script src="js/three.min.js"></script>
     <script src="js/chart.min.js"></script>
+    <script src="js/tensorflow.min.js"></script>
+    <script src="js/compromise.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/production.js"></script>
     <script src="js/employees.js"></script>
     <script src="js/customers.js"></script>
+    <script src="js/financials.js"></script>
+    <script src="js/innovation.js"></script>
     <script src="js/tasks.js"></script>
+    <script src="js/insights.js"></script>
+    <script src="js/voice.js"></script>
+    <script src="service-worker.js"></script>
 </body>
 </html>
