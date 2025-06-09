@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capmatic GM Command Center</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="bg-dark text-white p-3">
+        <h1>Capmatic GM Dashboard</h1>
+    </header>
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <h2>Production</h2>
+                <canvas id="productionChart"></canvas>
+            </div>
+            <div class="col-md-3">
+                <h2>Employees</h2>
+                <table class="table" id="employeeTable"></table>
+            </div>
+            <div class="col-md-3">
+                <h2>Customers</h2>
+                <div id="salesPipeline"></div>
+            </div>
+            <div class="col-md-3">
+                <h2>Tasks</h2>
+                <div id="kanbanBoard"></div>
+            </div>
+        </div>
+    </main>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/chart.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/production.js"></script>
+    <script src="js/employees.js"></script>
+    <script src="js/customers.js"></script>
+    <script src="js/tasks.js"></script>
+</body>
+</html>
